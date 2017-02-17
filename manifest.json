@@ -1,0 +1,20 @@
+{
+  "name": "Chrome Extension Boilerplate",
+  "author": "Taylor Perkins and Zak Spence",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "This extension is designed to give developers bookmarks and challenges to
+                  improve their coding capabilities",
+  "permissions": ["storage", "bookmarks"],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon" : "img/logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/*"],
+      "css": ["css/styles.css"],
+      "js": ["scripts.js", "js/app.js"]
+    }
+  ]
+}
