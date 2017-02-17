@@ -86,7 +86,6 @@ so that you can upload your own categories.
 },{"./bookmarks/bookmarkData.js":2,"./bookmarks/displayBookmarks.js":3}],2:[function(require,module,exports){
 "use strict";
 
-
 /*  
 
 The purpose of this file is to store data,
@@ -107,7 +106,9 @@ let getBookmarks = () => myBookmarks;
 let removeBookmarks = (bookmark) => {
 	for (let category = 0; category < myBookmarks.categories.length; category++) {
 		if (bookmark === myBookmarks.categories[category].name) {
-			myBookmarks.categories.splice(myBookmarks.categories[category], 1);
+			console.log("You could splice myBookmarks.categories.splice(myBookmarks.categories[category], 1); if you wanted to. BUT YOU WONT.");
+
+			// myBookmarks.categories.splice(myBookmarks.categories[category], 1);
 		}
 	}
 };
